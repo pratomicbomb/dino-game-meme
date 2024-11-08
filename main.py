@@ -3,12 +3,12 @@ import os
 
 pygame.init()
 
-clock = pygame.Clock()
+clock = pygame.time.Clock()
 
 screen = pygame.display.set_mode((500, 500))
-screen_rect = screen.get_rect()
+screen_rect = screen.get_frect()
 
-comicsans = pygame.Font("assets/COMIC.TTF")
+comicsans = pygame.font.Font("assets/COMIC.TTF")
 lose_text = comicsans.render(
     "HAHAHAHA YOU LOSE MUAHAHAHHAHAHAHAHAHAHA (R to restart btw)",
     True,
@@ -98,7 +98,7 @@ while True:
         screen.blit(dino, dino_rect)
         screen.blit(cheese, cheese_rect)
     else:
-        screen.blit(lose_text, lose_text.get_rect(bottomleft=screen_rect.bottomleft))
+        screen.blit(lose_text, lose_text.get_frect(bottomleft=screen_rect.bottomleft))
         if keys[pygame.K_r]:
             game_over = False
             jump_counter = 0
@@ -115,5 +115,7 @@ while True:
 
             xpos_cheese, ypos_cheese = (500, 500)
             xvelocity_cheese = 1
+            
+            cheese_counter = 0
 
     pygame.display.update()
