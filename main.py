@@ -16,7 +16,7 @@ lose_text = comicsans.render(
     wraplength=500,
 )
 
-game_screen = pygame.image.load("assets/nahidwin.png")
+game_screen = pygame.image.load("assets/background.png")
 game_screen = pygame.transform.grayscale(game_screen)
 
 lost_screen = pygame.image.load("assets/megamind.png")
@@ -115,7 +115,7 @@ while True:
 
             xpos_cheese, ypos_cheese = (500, 500)
             xvelocity_cheese = 1
-            
+
             cheese_counter = 0
 
     pygame.display.update()
