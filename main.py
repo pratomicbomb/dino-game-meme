@@ -52,7 +52,7 @@ while True:
 
     for event in events:
         if event.type == pygame.QUIT:
-            os.system("cls")
+            os.system("clear")
             raise (SystemExit)
 
     keys = pygame.key.get_just_pressed()
